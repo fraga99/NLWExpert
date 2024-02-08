@@ -102,12 +102,13 @@ for(const item of perguntas)   {
     for(let resposta of item.respostas)   {
         const dt = quizItem.querySelector('dl dt').cloneNode(true)
         dt.querySelector('span').textContent = resposta
-        
-        quizItem.querySelector('dl').appendChild(dt)
+
+        quizItem.quarySelector('dl').appendChild(dt)
     }
 
     
 }
 quizItem.querySelector('dl dt').remove()
+
 //coloca a pergunta na tela
 quiz.appendChild(quizItem)
